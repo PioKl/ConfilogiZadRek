@@ -113,7 +113,7 @@ export default function Questions() {
       </div>
 
       <div className="questionsButtonContainer">
-        <a href="/">
+        <a href="#">
           <button className="questionsButtonContainer__button">
             More Info
           </button>

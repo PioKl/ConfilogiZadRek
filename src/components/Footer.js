@@ -3,7 +3,6 @@ import "../styles/Footer.scss";
 import logo from "../images/logo-bookmark-footer.svg";
 import faceBookIcon from "../images/icon-facebook.svg";
 import twitterIcon from "../images/icon-twitter.svg";
-import iconError from "../images/icon-error.svg";
 
 export default function Footer() {
   /* 
@@ -132,17 +131,17 @@ export default function Footer() {
         <div className="linksContainer">
           <ul className="linksContainer__itemList">
             <li className="linksContainer__item">
-              <a className="linksContainer__link" href="/">
+              <a className="linksContainer__link" href="#">
                 Features
               </a>
             </li>
             <li className="linksContainer__item">
-              <a className="linksContainer__link" href="/">
+              <a className="linksContainer__link" href="#">
                 Pricing
               </a>
             </li>
             <li className="linksContainer__item">
-              <a className="linksContainer__link" href="/">
+              <a className="linksContainer__link" href="#">
                 Contact
               </a>
             </li>

@@ -25,22 +25,22 @@ export default function Header({ handleHover }) {
               onMouseEnter={handleHover}
               className="nav__item nav__item--normal"
             >
-              <a className="nav__link nav__link--normal" href="/">
+              <a className="nav__link nav__link--normal" href="#">
                 Features
               </a>
             </li>
             <li className="nav__item nav__item--normal">
-              <a className="nav__link nav__link--normal" href="/">
+              <a className="nav__link nav__link--normal" href="#">
                 Pricing
               </a>
             </li>
             <li className="nav__item nav__item--normal">
-              <a className="nav__link nav__link--normal" href="/">
+              <a className="nav__link nav__link--normal" href="#">
                 Contact
               </a>
             </li>
             <li className="nav__item nav__item--login">
-              <a className="nav__link nav__link--login" href="/">
+              <a className="nav__link nav__link--login" href="#">
                 Login
               </a>
             </li>

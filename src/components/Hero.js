@@ -14,7 +14,7 @@ export default function Hero() {
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
         <div className="heroContainer__buttonsContainer">
-          <a href="/">
+          <a href="#">
             <button
               className="heroContainer__button heroContainer__button--chrome"
               type="button"
@@ -22,7 +22,7 @@ export default function Hero() {
               Get it on Chrome
             </button>
           </a>
-          <a href="/">
+          <a href="#">
             <button
               className="heroContainer__button heroContainer__button--firefox"
               type="button"

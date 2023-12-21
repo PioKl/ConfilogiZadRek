@@ -25,7 +25,7 @@ const FeaturesShared = ({
           <h2 className="featureInfoContainer__heading">{heading}</h2>
           <p className="featureInfoContainer__description">{paragraphInfo}</p>
           <div className="featureInfoContainer__buttonsContainer">
-            <a href="/">
+            <a href="#">
               <button className="featureInfoContainer__button" type="button">
                 {buttonInfo}
               </button>

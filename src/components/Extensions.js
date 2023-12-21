@@ -54,7 +54,7 @@ export default function Extensions() {
             </div>
             <img className="card__dots" src={dots} alt="dots" />
             <div className="card__buttonContainer">
-              <a href="/">
+              <a href="#">
                 <button className="card__button" type="button">
                   {item.buttonInfo}
                 </button>

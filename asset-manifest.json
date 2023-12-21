@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ConfilogiZadRek/static/css/main.8facc8e4.css",
-    "main.js": "/ConfilogiZadRek/static/js/main.e8fabb40.js",
+    "main.js": "/ConfilogiZadRek/static/js/main.c81c0472.js",
     "static/media/illustration-features-tab-3.svg": "/ConfilogiZadRek/static/media/illustration-features-tab-3.a4206aab7946773b29b702492d2d014b.svg",
     "static/media/illustration-features-tab-2.svg": "/ConfilogiZadRek/static/media/illustration-features-tab-2.e933bd6d921c537d7743e08ea4ec488e.svg",
     "static/media/illustration-hero.svg": "/ConfilogiZadRek/static/media/illustration-hero.07801d05cb11930f0c826add8c05ce22.svg",
@@ -20,10 +20,10 @@
     "static/media/icon-hamburger.svg": "/ConfilogiZadRek/static/media/icon-hamburger.4385fd507d24f37ccbb3ae359b5c9555.svg",
     "static/media/icon-arrow.svg": "/ConfilogiZadRek/static/media/icon-arrow.8174203a5d4fc44f5247b825de6e2158.svg",
     "main.8facc8e4.css.map": "/ConfilogiZadRek/static/css/main.8facc8e4.css.map",
-    "main.e8fabb40.js.map": "/ConfilogiZadRek/static/js/main.e8fabb40.js.map"
+    "main.c81c0472.js.map": "/ConfilogiZadRek/static/js/main.c81c0472.js.map"
   },
   "entrypoints": [
     "static/css/main.8facc8e4.css",
-    "static/js/main.e8fabb40.js"
+    "static/js/main.c81c0472.js"
   ]
 }

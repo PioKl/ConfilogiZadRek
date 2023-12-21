@@ -75,16 +75,16 @@ export default function Header({ handleHover }) {
           <nav className="navMobile">
             <ul className="navMobile__burgerMenuItemList">
               <li className="navMobile__item">
-                <a href="/">Features</a>
+                <a href="#">Features</a>
               </li>
               <li className="navMobile__item">
-                <a href="/">Pricing</a>
+                <a href="#">Pricing</a>
               </li>
               <li className="navMobile__item">
-                <a href="/">Contact</a>
+                <a href="#">Contact</a>
               </li>
               <li className="navMobile__item navMobile__item--login">
-                <a href="/">Login</a>
+                <a href="#">Login</a>
               </li>
             </ul>
           </nav>

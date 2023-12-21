@@ -1,0 +1,91 @@
+@import "../App.scss";
+
+.featureContainer {
+  @include heroAndFeatureContainer("feature");
+  &--modal {
+    margin-top: 0;
+
+    @include laptop {
+      padding-bottom: 5rem;
+    }
+
+    @include smallDesktop {
+      padding-bottom: 10rem;
+    }
+  }
+}
+
+.featureInfoContainer {
+  margin-top: 14rem;
+  text-align: center;
+  flex-wrap: wrap;
+
+  @include tablet {
+    margin-top: 18rem;
+  }
+
+  @include laptop {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  &__heading {
+    flex-wrap: wrap;
+    @include fontSmallerHeading();
+  }
+
+  &__description {
+    padding: 2rem 0;
+    @include fontDescription();
+  }
+
+  &__buttonsContainer {
+    @include heroAndFeatureButtonsContainer();
+  }
+
+  &__button {
+    @include buttonClassic(typeOne);
+  }
+}
+
+.featureImageContainer {
+  @include heroAndFeatureImageContainer("feature");
+
+  &--alt {
+    &:before {
+      top: 50%;
+      @media (min-width: 546px) {
+        top: 40%;
+      }
+
+      @media (min-width: 630px) {
+        top: 30%;
+      }
+    }
+  }
+
+  //Jeśli featureImageContainer ma modyfikatory alt i modal
+  &--alt {
+    &.featureImageContainer--modal {
+      @include heroAndFeatureImageContainerModal();
+    }
+  }
+
+  //Jeśli featureImageContainer ma modyfikatory alt i modal to dodaj styl dla jego "brata" featureInfoContainer
+  &--alt {
+    &.featureImageContainer--modal {
+      + .featureInfoContainer {
+        // Dodaj style dla featureInfoContainer
+        margin-top: 14rem;
+
+        @include laptop {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__image {
+    @include heroAndFeaturesImage("feature");
+  }
+}

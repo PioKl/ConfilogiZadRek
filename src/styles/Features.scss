@@ -1,0 +1,100 @@
+@import "./App.scss";
+
+.featuresContainer {
+  @include sectionsMarginTop(features);
+  @include sectionsMarginBottom();
+  text-align: center;
+
+  &--noFeature {
+    @include sectionsMarginBottom();
+  }
+
+  &__heading {
+    @include fontSmallerHeading();
+  }
+
+  &__description {
+    margin-top: 2rem;
+    margin-bottom: 4.2rem;
+    @include laptop {
+      max-width: 60rem;
+      margin: 2rem auto 4.2rem auto;
+    }
+    @include fontDescription();
+  }
+}
+
+.tabsContainer {
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @include laptop {
+      margin: 0 auto;
+      max-width: 75rem;
+      flex-direction: row;
+
+      border-bottom: 1px solid $gray;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 1.8rem;
+    font-size: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $lightRed;
+    }
+
+    &:first-child {
+      border-top: 1px solid $gray;
+    }
+
+    border-bottom: 1px solid $gray;
+
+    &.--active {
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        margin: 0 auto;
+        top: 98%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 60%;
+        height: 0.4rem;
+        background-color: $lightRed;
+        transition: width 0.6s;
+      }
+    }
+
+    @include laptop {
+      flex: 1;
+      transition: background-color 0.3s;
+      &:first-child {
+        border-top: none;
+      }
+      border-bottom: none;
+
+      &.--active {
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          margin: initial;
+          top: 98%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 0.4rem;
+          background-color: $lightRed;
+          transition: width 0.3s;
+        }
+      }
+    }
+  }
+}

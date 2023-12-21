@@ -1,0 +1,82 @@
+@import "./App.scss";
+
+.extensionsInfoContainer {
+  margin: 0 auto;
+  @include laptop {
+    max-width: 60rem;
+  }
+
+  &__heading {
+    @include fontSmallerHeading();
+    text-align: center;
+  }
+
+  &__info {
+    @include fontDescription();
+    margin: 2rem auto 4.2rem auto;
+    text-align: center;
+  }
+}
+
+.extensionsCardsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+  @include universalMarginTop();
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.card {
+  position: relative;
+  display: grid;
+  place-items: center;
+  max-width: 28rem;
+  padding: 3.5rem 1rem 2rem 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 10px;
+
+  @include tablet {
+    max-width: 26rem;
+
+    &:nth-child(2) {
+      top: 5em;
+    }
+    &:nth-child(3) {
+      top: 10em;
+    }
+  }
+
+  &__infoContainer {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__versionInfo {
+    color: $gray;
+    font-size: 1.35rem;
+  }
+
+  &__dots {
+    max-width: 100%;
+  }
+
+  &__buttonContainer {
+    margin-top: 3rem;
+  }
+
+  &__button {
+    @include buttonClassic(typeOne);
+  }
+}

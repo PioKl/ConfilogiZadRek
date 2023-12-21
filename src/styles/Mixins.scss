@@ -1,0 +1,324 @@
+/* 
+===================
+
+FLEX, GRID MIXINS
+
+====================
+*/
+@mixin flex-spaceBetweenCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+===================
+
+Margins
+
+====================
+*/
+
+@mixin universalMarginTop {
+  margin-top: 8rem;
+}
+
+@mixin sectionsMarginTop($type: null) {
+  margin-top: 8rem;
+  @include tablet {
+    margin-top: 15rem;
+
+    @if ($type==questions) {
+      margin-top: 25rem;
+    } @else if ($type==footer) {
+      margin-top: 15rem;
+    }
+  }
+
+  @include laptop {
+    margin-top: 30rem;
+
+    @if ($type==features) {
+      margin-top: 15rem;
+    } @else if ($type==footer) {
+      margin-top: 15rem;
+    }
+  }
+}
+
+@mixin sectionsMarginBottom($type: null) {
+  margin-bottom: 8rem;
+  @include tablet {
+    margin-bottom: 15rem;
+  }
+  @include laptop {
+    margin-bottom: 25rem;
+  }
+}
+
+/* 
+======================================
+
+Buttons, Item, Item Interactions
+
+=======================================
+*/
+
+@mixin itemHover {
+  &:hover {
+    color: $lightRed;
+    cursor: pointer;
+  }
+}
+
+@mixin itemInteraction {
+  &:hover,
+  &:active,
+  &:focus {
+    color: $lightRed;
+    cursor: pointer;
+  }
+}
+
+@mixin buttonHover {
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: $lightRed;
+  }
+}
+
+@mixin buttonClassic($type) {
+  cursor: pointer;
+  max-width: 100%;
+  padding: 1rem 2rem;
+  font-family: $fontRubik;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.24);
+  font-size: 1.7rem;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  @if ($type==typeOne) {
+    color: white;
+    background-color: $lightBlue;
+
+    &:hover {
+      color: $lightBlue;
+      border: 1px solid $lightBlue;
+    }
+  } @else if($type==typeTwo) {
+    color: $gray;
+    background-color: #f1f1f1;
+
+    &:hover {
+      color: $gray;
+      border: 1px solid $darkBlue;
+    }
+  }
+}
+
+/* 
+==================================
+
+    HERO, FEATURES AND MODAL MIXINS
+
+==================================
+*/
+
+@mixin heroAndFeatureContainer($type: null) {
+  display: flex;
+  flex-direction: column-reverse;
+  @if ($type == "feature") {
+    flex-direction: column;
+  }
+  @include universalMarginTop();
+
+  @include laptop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 3rem;
+    grid-row-gap: 0px;
+
+    @if ($type == "feature") {
+      align-items: center;
+    }
+  }
+
+  @include desktop {
+    grid-column-gap: 5rem;
+  }
+}
+
+@mixin heroAndFeatureButtonsContainer($type: null) {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  @include laptop {
+    justify-content: flex-start;
+  }
+}
+
+@mixin heroAndFeatureImageContainer($type: null) {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+
+  @include laptop {
+    margin: 0;
+    margin-left: auto;
+    width: 40rem;
+  }
+
+  @include smallDesktop {
+    width: 45rem;
+  }
+
+  @include desktop {
+    width: 62.7rem;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    height: calc(170px + (350 - 170) * ((100vw - 320px) / (768 - 320)));
+    width: 100vw;
+    background-color: $lightBlue;
+    z-index: -1;
+    border-radius: 0 0 0 10em;
+
+    @if ($type == "feature") {
+      left: initial;
+      right: 30%;
+      border-radius: 0 0 10em 0em;
+    }
+
+    @include tablet {
+      height: 33rem;
+      left: 35%;
+
+      @if ($type == "feature") {
+        left: initial;
+        right: 35%;
+      }
+    }
+
+    @include laptop {
+      height: 25rem;
+    }
+    @include smallDesktop {
+      height: 28rem;
+    }
+
+    @include desktop {
+      height: 33rem;
+    }
+  }
+}
+
+@mixin heroAndFeatureImageContainerModal($type: null) {
+  @include laptop {
+    width: 40rem;
+  }
+
+  @include smallDesktop {
+    width: 45rem;
+  }
+}
+
+@mixin heroAndFeaturesImage($type: null) {
+  max-width: 100%;
+  height: auto;
+  @if ($type == "feature") {
+    @include laptop {
+      height: 30rem;
+    }
+    @include smallDesktop {
+      height: 35rem;
+    }
+  }
+}
+
+/* 
+==================================
+
+    FONTS MIXINS
+
+==================================
+*/
+
+@mixin fontMainHeading {
+  font-size: 3.2rem;
+
+  @include laptop {
+    font-size: clamp(2.6rem, 3rem, 4.5rem);
+    margin-top: 1em;
+  }
+
+  @include desktop {
+    font-size: clamp(3rem, 4.5rem, 4.6rem);
+    margin-top: 0.5em;
+  }
+}
+
+@mixin fontSmallerHeading {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+@mixin fontDescription {
+  font-size: 1.8rem;
+  color: $gray;
+
+  @include laptop {
+    font-size: 2rem;
+    line-height: 1.8;
+  }
+}
+
+/* 
+==================================
+
+    RESOLUTIONS MIXINS
+
+==================================
+*/
+
+@mixin tablet {
+  @media (min-width: #{$bp-tablet}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$bp-laptop}) {
+    @content;
+  }
+}
+
+@mixin smallDesktop {
+  @media (min-width: #{$bp-small-desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$bp-desktop}) {
+    @content;
+  }
+}

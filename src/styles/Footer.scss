@@ -1,0 +1,234 @@
+@import "./App.scss";
+
+.footerContainer {
+  @include sectionsMarginTop(footer);
+}
+
+.newsletterContainer {
+  position: relative;
+  background-color: $lightBlue;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+
+  @include laptop {
+    height: 35.4rem;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background-color: $lightBlue;
+    z-index: -1;
+  }
+}
+
+.newsletterInformationContainer {
+  text-align: center;
+  color: white;
+  &__joinedInfo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include fontDescription();
+    color: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+  &__counter {
+    display: inline-block;
+    width: 10rem;
+
+    &--reset {
+      width: auto;
+    }
+  }
+  &__joined {
+    position: relative;
+    right: 0.8rem;
+
+    &--reset {
+      right: 0;
+    }
+    &::before {
+      content: "+";
+      padding-right: 1rem;
+    }
+  }
+  &__heading {
+    max-width: 100%;
+    margin: 0 auto;
+    @include fontSmallerHeading();
+    font-weight: 500;
+    padding: 2rem 0;
+
+    @include tablet {
+      max-width: 70%;
+    }
+  }
+}
+
+.newsletterFormContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 2.5rem;
+
+  @include tablet {
+    max-width: 70%;
+  }
+  &__form {
+    display: grid;
+    gap: 1.5rem;
+
+    @include tablet {
+      grid-template-columns: 1fr auto;
+    }
+  }
+  &__formGroup {
+    display: grid;
+    &--error {
+      background-color: $lightRed;
+      outline: 4px solid $lightRed;
+      border-radius: 5px;
+    }
+  }
+
+  &__formInputContainer {
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+
+    &--error {
+      &::before {
+        content: url("../images/icon-error.svg");
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__formInput {
+    padding: 1.3rem 1.5rem;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    font-size: 1.7rem;
+    font-family: $fontRubik;
+    width: 100%;
+    &--error {
+      width: 88%;
+    }
+  }
+
+  &__error {
+    margin: 1rem 0 1rem 1rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: white;
+  }
+
+  &__button {
+    align-self: start; //nie zwiększy rozmiaru gdy input z emailem będzie to robił
+    padding: 1.3rem 2rem;
+    background-color: $lightRed;
+    border: 1px solid $lightRed;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family: $fontRubik;
+
+    &:hover {
+      background-color: white;
+      color: $lightRed;
+      cursor: pointer;
+    }
+  }
+}
+
+.footerMenuContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3.5rem 0;
+  background-color: $darkBlue;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background-color: $darkBlue;
+    z-index: -1;
+  }
+}
+
+.linksContainer {
+  padding: 3rem 0;
+  @include tablet {
+    padding: 0 0 0 4em;
+  }
+
+  @include laptop {
+    padding-left: 7em;
+  }
+  &__itemList {
+    color: white;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+  &__item {
+    padding: 1.3rem 0;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 1.6rem;
+      padding: 0 1.3rem;
+    }
+
+    @include desktop {
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  &__link {
+    @include itemInteraction();
+  }
+}
+
+.socialContainer {
+  @include tablet {
+    margin-left: auto;
+  }
+  &__icon {
+    margin: 0 3rem;
+
+    @include tablet {
+      margin: 0 2rem;
+    }
+
+    &:hover {
+      filter: invert(53%) sepia(67%) saturate(1805%) hue-rotate(324deg)
+        brightness(97%) contrast(102%);
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import "./App.scss";
+
+.questionsContainer {
+  @include sectionsMarginTop(questions);
+}
+
+.questionsInfoContainer {
+  margin: 0 auto;
+  @include laptop {
+    max-width: 60rem;
+  }
+
+  &__heading {
+    @include fontSmallerHeading();
+    text-align: center;
+  }
+
+  &__info {
+    @include fontDescription();
+    margin: 2rem auto 4.2rem auto;
+    text-align: center;
+  }
+}
+
+.questionsButtonContainer {
+  margin-top: 3rem;
+  text-align: center;
+  &__button {
+    @include buttonClassic(typeOne);
+  }
+}
+
+/* Accordion */
+
+.wrapper {
+  @include laptop {
+    max-width: 60rem;
+  }
+  margin-inline: auto;
+  line-height: 1.5;
+}
+
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+
+.accordion-content[aria-hidden="false"] {
+  grid-template-rows: 1fr;
+}
+
+.accordion-content > div {
+  overflow: hidden;
+}
+
+.accordion-content > div > p {
+  padding: 2rem 0;
+  line-height: 2.7rem;
+}
+
+.accordion {
+  color: $darkBlue;
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+.accordion-panel {
+  padding: 1rem;
+  border-top: 1px solid $gray;
+  cursor: pointer;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  @include laptop {
+    &:first-child {
+      border-top: 1px solid $gray;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $gray;
+  }
+}
+
+.accordion h3 {
+  position: relative;
+  font-weight: 400;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:hover {
+    color: $lightRed;
+  }
+}
+
+.accordion-title {
+  img {
+    transition: transform 0.5s ease;
+    transform: rotate(0deg);
+  }
+}
+
+.accordion-title-open {
+  img {
+    transform: rotate(180deg);
+    filter: invert(53%) sepia(67%) saturate(1805%) hue-rotate(324deg)
+      brightness(97%) contrast(102%);
+  }
+}
+
+.accordion-trigger {
+  background: transparent;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}

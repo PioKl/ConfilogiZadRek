@@ -1,0 +1,73 @@
+@import "./App.scss";
+
+/* Modal.css */
+
+.modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+
+  @include tablet {
+    padding: 0
+      calc(
+        2rem +
+          (
+            (
+              (100vw - #{$bp-tablet/1em * 1.6rem}) /
+                (#{$bp-laptop/1em * 1.6} - #{$bp-tablet/1em * 1.6})
+            )
+          ) * (3.9 - 2)
+      );
+  }
+
+  @include laptop {
+    padding: 0
+      calc(
+        10rem +
+          (
+            (
+              (100vw - #{$bp-laptop/1em * 1.6rem}) /
+                (#{$bp-desktop/1em * 1.6} - #{$bp-laptop/1em * 1.6})
+            )
+          ) * (12 - 10)
+      );
+  }
+
+  @include desktop {
+    padding: 0
+      calc(
+        10rem +
+          (
+            (
+              (100vw - #{$bp-laptop/1em * 1.6rem}) /
+                (#{$bp-large-desktop/1em * 1.6} - #{$bp-laptop/1em * 1.6})
+            )
+          ) * (50 - 10)
+      );
+  }
+}
+
+.modal {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: end;
+  align-items: self-start;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 5px;
+  margin-right: 1.8rem;
+
+  &__closeIcon {
+    margin-bottom: 3rem;
+    cursor: pointer;
+    filter: brightness(0%);
+  }
+}

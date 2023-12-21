@@ -1,0 +1,132 @@
+@import "./App.scss";
+
+.container {
+  @include flex-spaceBetweenCenter();
+  padding: 3rem 0;
+
+  @include desktop {
+    padding-right: 10rem;
+  }
+
+  /* Desktop Navigation */
+
+  .nav {
+    display: none;
+    @include tablet {
+      display: flex;
+    }
+    &__itemList {
+      @include flex-center();
+    }
+
+    &__item {
+      margin-left: 3rem;
+      font-size: 1.6rem;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+
+      @include laptop {
+        font-size: 1.6rem;
+      }
+
+      @include desktop {
+        letter-spacing: 0.1rem;
+        margin-left: 4rem;
+      }
+    }
+
+    &__link {
+      &--normal {
+        @include itemInteraction();
+      }
+      &--login {
+        border: 1px solid $lightRed;
+        border-radius: 5px;
+        padding: 1rem 2rem;
+        background-color: $lightRed;
+        color: white;
+
+        &:hover {
+          background-color: transparent;
+          color: $lightRed;
+        }
+      }
+    }
+  }
+
+  /* Mobile Navigation */
+
+  &__burgerMenu {
+    cursor: pointer;
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.navigationMobileContainer {
+  @include tablet {
+    display: none;
+  }
+  position: fixed;
+  background-color: $darkBlueTransparent;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 100%;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-out;
+  z-index: 100;
+
+  padding: 3rem 2rem;
+
+  &--hidden {
+    left: 200%;
+  }
+}
+
+.logoMobileContainer {
+  @include flex-spaceBetweenCenter();
+
+  margin-bottom: 5rem;
+
+  &__logo {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(241deg)
+      brightness(102%) contrast(103%);
+  }
+
+  &__closeIcon {
+    cursor: pointer;
+    &:hover {
+      filter: invert(51%) sepia(65%) saturate(3901%) hue-rotate(330deg)
+        brightness(100%) contrast(97%);
+    }
+  }
+}
+
+.navMobile {
+  &__item {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    border-bottom: 1px solid $gray;
+    padding: 2.5rem;
+
+    @include itemHover();
+
+    &:first-child {
+      border-top: 1px solid $gray;
+    }
+
+    &--login {
+      margin-top: 3rem;
+      border: 2px solid white;
+      border-radius: 5px;
+
+      @include buttonHover();
+    }
+  }
+}

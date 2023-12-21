@@ -1,0 +1,54 @@
+@import "./App.scss";
+
+.heroContainer {
+  @include heroAndFeatureContainer();
+
+  &__info {
+    @include universalMarginTop();
+    text-align: center;
+    flex-wrap: wrap;
+
+    @include laptop {
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+
+  &__infoHeading {
+    flex-wrap: wrap;
+    @include fontMainHeading();
+  }
+
+  &__infoDescription {
+    padding: 2rem 0;
+    @include fontDescription();
+  }
+
+  &__buttonsContainer {
+    @include heroAndFeatureButtonsContainer();
+    margin-top: 2rem;
+  }
+
+  &__button {
+    flex: 1;
+
+    &--chrome {
+      @include buttonClassic(typeOne);
+    }
+
+    &--firefox {
+      @include buttonClassic(typeTwo);
+    }
+
+    @include laptop {
+      flex: initial;
+    }
+  }
+
+  &__imageContainer {
+    @include heroAndFeatureImageContainer();
+  }
+  &__image {
+    @include heroAndFeaturesImage();
+  }
+}

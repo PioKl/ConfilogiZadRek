@@ -1,0 +1,49 @@
+@import "./Base.scss";
+@import "./Colors.scss";
+@import "./Fonts.scss";
+@import "./Mixins.scss";
+@import "./Resolutions.scss";
+.App {
+  height: 100%;
+  padding: 0 2rem;
+
+  @include tablet {
+    //padding: 0 calc(20px + (39 - 20) * ((100vw - 768px) / (979 - 768))); //Poniżej według tego schematu tylko z rem
+    padding: 0
+      calc(
+        2rem +
+          (
+            (
+              (100vw - #{$bp-tablet/1em * 1.6rem}) /
+                (#{$bp-laptop/1em * 1.6} - #{$bp-tablet/1em * 1.6})
+            )
+          ) * (3.9 - 2)
+      );
+  }
+
+  @include laptop {
+    padding: 0
+      calc(
+        10rem +
+          (
+            (
+              (100vw - #{$bp-laptop/1em * 1.6rem}) /
+                (#{$bp-desktop/1em * 1.6} - #{$bp-laptop/1em * 1.6})
+            )
+          ) * (12 - 10)
+      );
+  }
+
+  @include desktop {
+    padding: 0
+      calc(
+        10rem +
+          (
+            (
+              (100vw - #{$bp-laptop/1em * 1.6rem}) /
+                (#{$bp-large-desktop/1em * 1.6} - #{$bp-laptop/1em * 1.6})
+            )
+          ) * (50 - 10)
+      );
+  }
+}

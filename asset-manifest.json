@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/ConfilogiZadRek/static/css/main.3327cf65.css",
+    "main.js": "/ConfilogiZadRek/static/js/main.b4bbe26e.js",
+    "static/media/illustration-features-tab-3.svg": "/ConfilogiZadRek/static/media/illustration-features-tab-3.a4206aab7946773b29b702492d2d014b.svg",
+    "static/media/illustration-features-tab-2.svg": "/ConfilogiZadRek/static/media/illustration-features-tab-2.e933bd6d921c537d7743e08ea4ec488e.svg",
+    "static/media/illustration-hero.svg": "/ConfilogiZadRek/static/media/illustration-hero.07801d05cb11930f0c826add8c05ce22.svg",
+    "static/media/logo-bookmark.svg": "/ConfilogiZadRek/static/media/logo-bookmark.d426263a94701e122e7d14b0c6eee7ce.svg",
+    "static/media/logo-bookmark-footer.svg": "/ConfilogiZadRek/static/media/logo-bookmark-footer.5f5c0b755ecfffc1468063404877de02.svg",
+    "static/media/illustration-features-tab-1.svg": "/ConfilogiZadRek/static/media/illustration-features-tab-1.0da3d302207bcad90cdadc5052e35ed6.svg",
+    "static/media/logo-chrome.svg": "/ConfilogiZadRek/static/media/logo-chrome.a42815a014c452e4d95851f7a8daf95b.svg",
+    "index.html": "/ConfilogiZadRek/index.html",
+    "static/media/logo-firefox.svg": "/ConfilogiZadRek/static/media/logo-firefox.a9e6ca53e8cfd641e556b7afb1f0085f.svg",
+    "static/media/bg-dots.svg": "/ConfilogiZadRek/static/media/bg-dots.90f0b46cec8b5f7cfd12393cb5f391a7.svg",
+    "static/media/icon-twitter.svg": "/ConfilogiZadRek/static/media/icon-twitter.dde79e7edd3892319de2ee22ea7ca39d.svg",
+    "static/media/icon-facebook.svg": "/ConfilogiZadRek/static/media/icon-facebook.8b45ba94b5f75f0d38a9bbcc11df55c2.svg",
+    "static/media/icon-error.svg": "/ConfilogiZadRek/static/media/icon-error.a46cc66573dea1a15acb0dd260693083.svg",
+    "static/media/logo-opera.svg": "/ConfilogiZadRek/static/media/logo-opera.ff14e4763945338fe002017c72e7e597.svg",
+    "static/media/icon-close.svg": "/ConfilogiZadRek/static/media/icon-close.b04dc29397de9c9f194fb075c140e966.svg",
+    "static/media/icon-hamburger.svg": "/ConfilogiZadRek/static/media/icon-hamburger.4385fd507d24f37ccbb3ae359b5c9555.svg",
+    "static/media/icon-arrow.svg": "/ConfilogiZadRek/static/media/icon-arrow.8174203a5d4fc44f5247b825de6e2158.svg",
+    "main.3327cf65.css.map": "/ConfilogiZadRek/static/css/main.3327cf65.css.map",
+    "main.b4bbe26e.js.map": "/ConfilogiZadRek/static/js/main.b4bbe26e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3327cf65.css",
+    "static/js/main.b4bbe26e.js"
+  ]
+}
